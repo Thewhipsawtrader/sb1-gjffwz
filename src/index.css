@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  :root.dark {
+    color-scheme: dark;
+  }
+
+  :root.grey {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+
+  .dark body {
+    @apply bg-gray-900 text-white;
+  }
+
+  .grey body {
+    @apply bg-gray-700 text-gray-100;
+  }
+}
+
+/* Clerk UI Customization */
+.cl-card {
+  @apply shadow-none;
+}
+
+.dark .cl-card {
+  @apply bg-gray-800 text-white;
+}
+
+.grey .cl-card {
+  @apply bg-gray-600 text-gray-100;
+}
+
+.cl-footerAction {
+  @apply text-indigo-600 hover:text-indigo-700;
+}
+
+.dark .cl-footerAction {
+  @apply text-indigo-400 hover:text-indigo-300;
+}
+
+.grey .cl-footerAction {
+  @apply text-indigo-300 hover:text-indigo-200;
+}
+
+.cl-button-primary {
+  @apply bg-indigo-600 hover:bg-indigo-700;
+}
+
+.dark .cl-button-primary {
+  @apply bg-indigo-500 hover:bg-indigo-600;
+}
+
+.grey .cl-button-primary {
+  @apply bg-indigo-400 hover:bg-indigo-500;
+}
